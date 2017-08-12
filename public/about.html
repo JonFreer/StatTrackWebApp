@@ -1,0 +1,201 @@
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+<link rel="stylesheet" href="css/sidebar.css"> <!-- Resource style -->
+<link rel='shortcut icon' type='image/x-icon' href="favicon.ico" />
+<script src = "js/sidebar.js"></script>
+<style>
+@supports (display: grid) {	
+  @media screen and (min-width: 800px) {
+	   .main-content {
+	  display:grid;
+	  grid-template-columns: 1fr 500px 1fr ;
+      grid-template-rows: 1fr 500px 1fr;
+      grid-area: main;
+	  grid-column: 2/3;
+	  grid-row: 2/3;
+	  background: #eceff1;
+	  grid-column-gap: 10px;
+      grid-row-gap: 15px;
+	  padding: 15px;
+	  min-height: 0;  /* NEW */
+	  /*min-width: 0;    NEW; needed for Firefox */
+	  overflow: auto;
+    }
+	
+	.innerContent{
+	 background: #FFF;
+	 box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 2px 1px -1px rgba(0,0,0,0.12);
+    padding: 3%;
+		grid-column: 2/3;
+		  grid-row: 2/3;
+		
+	}
+	.innerContent h1{
+        font-weight: bold;
+        font-size-adjust: 10;
+	
+        
+    }
+
+
+  }
+}
+
+</style>
+<title>StatTrack 2.0</title>
+	<!-- script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script><Google graph api -->  
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.1.5/firebase.js"></script>
+	<script type="text/javascript">
+	 var config = {
+    apiKey: "AIzaSyDGd3ciRvAFvV8reLwduQ8hrPhvQAuec10",
+    authDomain: "stattrack-49951.firebaseapp.com",
+    databaseURL: "https://stattrack-49951.firebaseio.com",
+    projectId: "stattrack-49951",
+    storageBucket: "stattrack-49951.appspot.com",
+    messagingSenderId: "1074680887154"
+	};
+	firebase.initializeApp(config);
+    var txt = "";	
+	
+// txt == content of form input
+
+    function handleIt(txt) {
+window.open("view.html#"+txt);
+}     
+function sidebar(val){
+	temp = document.getElementById("Side")
+
+}
+   //Map from this point on- Help me god
+	
+//Charts
+
+</script>
+</head>
+
+<body>
+
+<div class="site">
+    <!--a class="skip-link screen-reader-text" href="#content">Skip to content</a-->
+	
+	   <aside class="sidebar">
+		<div class="sidebarHead" id="Main" >
+			MAIN
+		</div>
+	   <div class = "sidebarContent overview" id="Side0" style=" cursor: pointer;" onClick = "sidebarHandle(0)">
+			Overview
+		</div>
+		<div class = "sidebarSub" id="Side0-0" >
+			<div class ="sidebarSubWrap">Fish</div>
+		</div>
+		<div class = "sidebarSub" id="Side0-1" >
+			<div class ="sidebarSubWrap">Fish</div>
+		</div>
+		<div class = "sidebarContent" id="Side1"  onClick="sidebarHandle(1)">
+			Selections
+		</div>
+		<div class = "sidebarSub" id="Side1-0" >
+			<div class ="sidebarSubWrap">Fish</div>
+		</div>
+		<div class = "sidebarSub" id="Side1-1" >
+			<div class ="sidebarSubWrap">Fish</div>
+		</div>
+		<div class = "sidebarSub" id="Side1-2" >
+			<div class ="sidebarSubWrap">Fish</div>
+		</div>
+		<div class = "sidebarContent" id="Side2"  onClick="sidebarHandle(2)">
+			Comments
+		</div>
+		<div class = "sidebarSub" id="Side2-0" >
+			<div class ="sidebarSubWrap">Fish</div>
+		</div>
+		<div class = "sidebarSub" id="Side2-1" >
+			<div class ="sidebarSubWrap">Fish</div>
+		</div>
+		<div class = "sidebarSub" id="Side2-2" >
+			<div class ="sidebarSubWrap">Fish</div>
+		</div>
+		<div class="sidebarHead" id="Main" >
+			secondary
+		</div>
+		<div class = "sidebarContent" id="Side2"  onClick="">
+			Selections
+		</div>
+		<div class = "sidebarContent" id="Side3"  onClick="">
+			Selections
+		</div>
+		<div class="sidebarHead" id="Main" >
+			action
+		</div>
+		<div class=sidebarActionBtn onclick="window.open('https://console.firebase.google.com/project/stattrack-49951/overview');">
+			Go to Console
+		</div>
+		<div>
+
+		</div>
+		<a href="http://jonfreer.co.uk" class="sidebarlink">
+			jonfreer.co.uk
+		</a>
+
+    </aside>
+	
+	<header class= "imagetop"><a href="index.html">
+		<img id="img-imagetop"  src="img/st-top.png"></img></a>
+	</header>
+	
+    <header class="cd-search adminbar">
+		<form action="javascript:handleIt(searchbox.value)">
+				<input autocomplete="off" id="searchbox" type="search" placeholder="Search...">
+			</form>
+			<a href="about.html" class="topnav">About</a>
+			<a class="topnav" id="account">Account</a>
+    </header><!-- .masthead -->
+  
+  <!--h1 class="page-title"></h1-->
+
+    <main id="content" class="main-content">
+		<div></div>
+        <div class= "innerContent">
+             <h1>What is StatTrack</h1>
+           </br>
+           StatTrack is a tool built to allow users to go about tracking aspects of their life and then be presented with easy to read and appropriately represented data.
+           </br></br>
+           The project incorporates the use of an Android app which allows the user to input the data. Here we collect information such as who is inputting the data, where they are and the time.
+           Using this data we can then work out relevant statistics, plot maps and create graphs.
+           </br></br>
+            This website acts as the web interface for the users and allows them to access the necessary content. Due to the design all of the content on the website updates in real time, including the graphs and maps.
+            </br></br>
+            StatTrack incorporates a number of different features such as real time databases, web authentication, web functions and handling a number of different API's. The project was designed as a learning experience.
+            </br></br>
+            -Jon
+
+		</div>
+	
+
+        
+    </main>
+
+
+
+    
+    <!--footer class="colophon">
+
+    </footer-->
+
+</div>
+
+
+<!--script>
+
+if (window.location.hash != ""){ //Reads url and runs check based on post hash
+handleIt(window.location.hash.substring(1))};
+</script-->
+
+</body>
+
+
+</html>
